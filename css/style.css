@@ -121,7 +121,7 @@ h3 {
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  /* padding: 4px 19px; */
+  padding: 4px 19px;
   padding-right: 15px;
   border-radius: 25px;
   border: 2px solid #d9d9d9;
