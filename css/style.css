@@ -8,9 +8,23 @@
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
 }
-
+/* les titres */
+h1 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+h2 {
+  font-weight: 700;
+  font-size: 22px;
+}
+/* couleur des icônes */
 .fa-solid {
   color: var(--main-color);
+}
+/* sauf de l' icône localisation qui est noire */
+.fa-location-dot {
+  color: black;
 }
 
 body {
@@ -44,22 +58,18 @@ header > nav > ul > li > a {
   text-decoration: none;
   padding-top: 16px;
 }
+/* quand on passe la souris sur les liens */
 header > nav > ul > li > a:hover {
   border-top: 2px solid;
   color: var(--main-color);
 }
 /* fin de barre de nav */
 .info-group {
-  height: 281px;
+  display: flex;
+  flex-direction: column;
 }
-h1 {
-  font-weight: 700;
-  font-size: 22px;
-}
-h2 {
-  font-weight: 400;
-  font-size: 16px;
-  padding-bottom: 35px;
+.info-group > p {
+  margin-bottom: 0px;
 }
 
 /* barre de recherche */
@@ -68,6 +78,7 @@ h2 {
 .search-bar {
   display: flex;
   padding-bottom: 35px;
+  padding-top: 35px;
 }
 
 .search-bar > i {
@@ -113,8 +124,7 @@ input[type="search"] {
   flex-direction: row;
   gap: 15px;
 }
-h3 {
-}
+
 .button-filter {
   height: 50px;
   display: flex;
@@ -132,7 +142,7 @@ h3 {
   font-size: 22px;
   padding-right: 10px;
 }
-.button-filter > p {
+.button-filter {
   color: black;
   font-size: 17px;
   font-family: Raleway;
@@ -182,13 +192,19 @@ h3 {
 
 .card-title {
   font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.card-subtitle {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .euro {
   font-weight: 700;
 }
 
-.neutralStar {
+.neutral-star {
   color: var(--main-bg-color);
 }
 
@@ -204,10 +220,64 @@ h3 {
   padding: 30px;
   box-sizing: border-box;
 }
+.Activities-in-Marseille section {
+  padding: 30px;
+  box-sizing: border-box;
+}
+footer {
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.container-footer-titles {
+  display: flex;
+  width: 100%;
+  gap: 20%;
+}
 
 /****** Hebergements ***********/
 .hebergements {
   width: 65%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.hebergements-cards-rang-1,
+.hebergements-cards-rang-2 {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+}
+.hebergements-cards-rang-1 {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.hebergements-cards-rang-1 img,
+.hebergements-cards-rang-2 img {
+  width: 100%;
+  height: 124px;
+  border-radius: 20px 20px 0px 0px;
+
+  padding-bottom: 0px;
+}
+
+.hebergements-cards-rang-1 > article.card,
+.hebergements-cards-rang-2 > article.card {
+  width: 29%;
+}
+
+.Afficher_plus {
+  color: #000;
+
+  font-size: 18px;
+  font-family: Raleway;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
 
 /****** Populaires ***********/
@@ -255,6 +325,35 @@ h3 {
   margin-bottom: 5px;
 }
 
+/* Activités à Marseille */
+.Activities {
+  width: 100%;
+
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.activities-cards {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 30px;
+  gap: 30px;
+}
+.activities-cards img {
+  width: 100%;
+  height: 380px;
+
+  border-radius: 20px 20px 0px 0px;
+}
+.activities-cards > article.card {
+  width: 25%;
+  padding: 0px;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.correction {
+  margin: 19px 20px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
