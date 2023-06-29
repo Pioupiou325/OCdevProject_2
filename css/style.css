@@ -125,6 +125,17 @@ input[type="search"] {
 .filters {
   display: flex;
   flex-direction: row;
+}
+/* pour espacer le titre filtres avec le 1er bouton filtre */
+.margin-15 {
+  margin-right: 15px;
+}
+
+.all-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   gap: 15px;
 }
 
@@ -391,6 +402,14 @@ footer {
 
   .populaires-cards .card-subtitle {
     font-size: 13px;
+  }
+  /* passer la hauteur des images activités à 200px */
+  .activities-cards img {
+    height: 200px;
+  }
+  /* passer le titre des filtres au dessus des boutons filtres */
+  .filters {
+    flex-direction: column;
   }
 }
 
