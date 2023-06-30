@@ -428,8 +428,9 @@ footer {
   }
   .phone {
     display: inline;
-
-    background-color: #faf9f9;
+  }
+  .fa-magnifying-glass {
+    color: white;
   }
   .hebergements-and-populaires {
     flex-direction: column-reverse;
