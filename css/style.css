@@ -448,6 +448,9 @@ footer {
     margin-top: 33px;
     width: 100%;
   }
+  .hebergements-cards-rang-1 {
+    padding-bottom: 0px;
+  }
   .container-footer-titles {
     flex-direction: column;
   }
