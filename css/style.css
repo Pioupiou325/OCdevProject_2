@@ -362,6 +362,10 @@ footer {
   padding-top: 30px;
   gap: 30px;
 }
+.activities-cards > a {
+  text-decoration: none;
+  width: 25%;
+}
 .activities-cards img {
   width: 100%;
   height: 380px;
@@ -443,15 +447,26 @@ footer {
   }
 
   /* ... */
+  /* mettre hebergements en column et pleine largeur */
   .hebergements-cards-rang-1 > a,
   .hebergements-cards-rang-2 > a {
     flex-direction: column;
     margin-top: 33px;
     width: 100%;
   }
+  /* réduire l' écart vertival entre rang 1 et rang 2 */
   .hebergements-cards-rang-1 {
     padding-bottom: 0px;
   }
+  /* mettre les cartes activities en pleine largeur */
+  .activities-cards > a {
+    width: 100%;
+  }
+  /* mettre activities en column */
+  .activities-cards {
+    flex-direction: column;
+  }
+  /* mettre le footer en column */
   .container-footer-titles {
     flex-direction: column;
   }
