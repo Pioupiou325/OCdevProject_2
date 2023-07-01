@@ -470,6 +470,10 @@ footer {
   .activities-cards {
     flex-direction: column;
   }
+  /* réduire hauteur des images  */
+  .activities-cards img {
+    height: 141px;
+  }
   /* mettre le footer en column */
   .container-footer-titles {
     flex-direction: column;
