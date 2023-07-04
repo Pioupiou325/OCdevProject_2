@@ -104,13 +104,11 @@ input[type="search"] {
   height: 49px;
   font-size: 18px;
   border: 2px solid #f2f2f2;
-}
-/* Marseille,France en gras */
-#search-localisation::placeholder {
   font-weight: bold;
   color: black;
   font-weight: 700;
 }
+
 /* div contenant le bouton et/ou la loupe */
 .research {
   height: 49px;
@@ -204,7 +202,7 @@ input[type="search"] {
   font-size: 22px;
 }
 
-.card {
+.hebergements-and-populaires .card {
   background-color: white;
   border-radius: 20px;
   padding: 5px;
@@ -261,9 +259,11 @@ footer {
 .container-footer-titles {
   display: flex;
   width: 100%;
-  gap: 20%;
+  justify-content: space-between;
 }
-
+.container-footer-titles section {
+  width: 30%;
+}
 /****** Hebergements ***********/
 .hebergements {
   width: 65%;
@@ -275,8 +275,13 @@ footer {
 .hebergements-cards-rang-1,
 .hebergements-cards-rang-2 {
   display: flex;
+
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.hebergements-cards-rang-1 article.card,
+.hebergements-cards-rang-2 article.card {
+  height: 100%;
 }
 /* espacer les 2 rangées de cartes  */
 .hebergements-cards-rang-1 {
@@ -364,25 +369,25 @@ footer {
 }
 .activities-cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   padding-top: 30px;
-  gap: 30px;
 }
-.activities-cards > a {
+.activities-cards a {
   text-decoration: none;
-  width: 25%;
+  width: 24%;
 }
 .activities-cards img {
   width: 100%;
   height: 380px;
-
   border-radius: 20px 20px 0px 0px;
 }
-.activities-cards .article.card {
-  width: 25%;
-  padding: 0px;
+.activities-cards article.card {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5px;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }
 .correction {
   margin: 19px 20px;
@@ -434,10 +439,12 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* .main-container {
-    margin: 20px;
-    padding: 20px;
-  } */
+  .main-container {
+    padding: 0px;
+  }
+  section.info-group {
+    padding: 0 20px;
+  }
   header {
     padding: 0px;
     margin: 0px;
@@ -448,6 +455,7 @@ footer {
   .logo {
     margin-top: 30px;
     margin-bottom: 30px;
+    align-items: center;
   }
   .liens {
     gap: 0px;
@@ -461,8 +469,14 @@ footer {
     justify-content: space-between;
     /* flex-basis: content; */
   }
-
+  header nav ul li {
+    width: 50%;
+    text-align: center;
+    margin-left: 0px;
+  }
   header nav ul li a {
+    display: block;
+    width: 100%;
     padding-bottom: 15px;
     gap: 0px;
     border-bottom: 2px solid;
