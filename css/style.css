@@ -103,9 +103,13 @@ input[type="search"] {
   text-align: center;
   height: 49px;
   font-size: 18px;
+  border: 2px solid #f2f2f2;
+}
+/* Marseille,France en gras */
+#search-localisation::placeholder {
+  font-weight: bold;
   color: black;
   font-weight: 700;
-  border: 2px solid #f2f2f2;
 }
 /* div contenant le bouton et/ou la loupe */
 .research {
