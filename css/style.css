@@ -10,14 +10,9 @@
 }
 /* les titres */
 h1 {
-  font-weight: 700;
-  font-size: 22px;
   margin-bottom: 0px;
 }
-h2 {
-  font-weight: 700;
-  font-size: 22px;
-}
+
 /* couleur des icônes */
 .fa-solid {
   color: var(--main-color);
@@ -62,6 +57,7 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   padding-top: 17px;
+  color: black;
 }
 /* quand on passe la souris sur les liens */
 header nav ul li a:hover {
@@ -77,41 +73,41 @@ header nav ul li a:hover {
   margin-bottom: 0px;
 }
 
-/* barre de recherche */
+/* formulaire : barre de recherche */
 /* debut */
 
+/* container parent pour la barre de recherche */
 .search-bar {
   display: flex;
   padding-bottom: 35px;
   padding-top: 35px;
   padding-right: 0px;
 }
+/* couleur de fond icone de localisation */
 .location {
   background-color: #f2f2f2;
 }
-
+/* icone de localisation */
 .search-bar i {
   height: 49px;
 
   display: flex;
-  width: 50px;
+  width: 50px; /*(!!!!!ne conserve pas sa width en mode phone...) */
   align-items: center;
   justify-content: center;
-
   border-radius: 15px 0px 0px 15px;
 }
-
+/* input du label */
 input[type="search"] {
   display: flex;
   text-align: center;
   height: 49px;
   font-size: 18px;
   color: black;
-  font-family: Raleway;
   font-weight: 700;
   border: 2px solid #f2f2f2;
 }
-
+/* div contenant le bouton et/ou la loupe */
 .research {
   height: 49px;
   border: 2px solid var(--main-color);
@@ -124,6 +120,7 @@ input[type="search"] {
   font-weight: 700;
   color: white;
 }
+/* masquer loupe en mode desktop */
 .phone {
   display: none;
 }
@@ -131,6 +128,7 @@ input[type="search"] {
 
 /* début des filtres */
 
+/* container parent des filtres +titre */
 .filters {
   display: flex;
   flex-direction: row;
@@ -142,15 +140,14 @@ input[type="search"] {
   font-weight: 700;
   margin-right: 15px;
 }
-
+/* container parent des boutons sans le texte "filtre" */
 .all-buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   gap: 15px;
 }
-
+/* caractéristiques des boutons */
 .button-filter {
   height: 50px;
   display: flex;
@@ -162,37 +159,37 @@ input[type="search"] {
   border-radius: 25px;
   border: 2px solid #d9d9d9;
   background-color: white;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
 }
-
+/* icone info */
 .button-filter i {
   font-size: 22px;
   padding-right: 10px;
 }
-.button-filter {
-  color: black;
-  font-size: 17px;
-  font-family: Raleway;
-  font-weight: 700;
-}
+/* passage souris sur les boutons des fitres */
 .button-filter:hover {
   background-color: #deebff;
 }
+/* container parent de l icone + du texte concluant la section info */
 .conclusion {
   display: flex;
   text-align: center;
   align-items: center;
   gap: 15px;
 }
+
+/* cercle entourant l icone info */
 .entourer-info {
   width: 22px;
   border: 2px solid var(--main-bg-color);
   border-radius: 50%;
 }
-
+/* container principal déjà créé de base */
 .main-container {
   width: 100%;
   max-width: 1440px;
-  min-width: 320px;
   padding: 0 50px;
   padding-top: 0px;
   box-sizing: border-box;
@@ -209,7 +206,7 @@ input[type="search"] {
   padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
+/* adaptation de l image a son container (créé de base) */
 .card img {
   object-fit: cover;
 }
@@ -225,11 +222,11 @@ input[type="search"] {
   margin-bottom: 8px;
   color: black;
 }
-
+/* span de l euro pour 700 */
 .euro {
   font-weight: 700;
 }
-
+/* étoile grisée */
 .neutral-star {
   color: var(--main-bg-color);
 }
@@ -277,10 +274,13 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+/* espacer les 2 rangées de cartes  */
 .hebergements-cards-rang-1 {
   padding-bottom: 30px;
   padding-top: 30px;
 }
+
+/* gestion des images hebergements */
 .hebergements-cards-rang-1 img,
 .hebergements-cards-rang-2 img {
   width: 100%;
@@ -289,8 +289,7 @@ footer {
 }
 .hebergements-cards-rang-1 a,
 .hebergements-cards-rang-2 a {
-  width: 29%;
-
+  width: 30%;
   text-decoration: none;
 }
 
@@ -298,7 +297,7 @@ footer {
   color: #000;
 
   font-size: 18px;
-  font-family: Raleway;
+
   font-weight: 700;
   margin-top: 30px;
   margin-bottom: 0px;
@@ -344,8 +343,10 @@ footer {
 .populaires-cards .card-subtitle {
   margin: 0;
 }
-
-.populaires-cards .card-rating {
+/* espace de 5px sous les étoiles (créé de base) on rajoute pour hébergements*/
+.populaires-cards .card-rating,
+.hebergements-cards-rang-1 .card-rating,
+.hebergements-cards-rang-2 .card-rating {
   margin-bottom: 5px;
 }
 
@@ -446,7 +447,6 @@ footer {
   }
   .liens {
     gap: 0px;
-    margin: 0px;
   }
   header nav {
     width: 100%;
@@ -454,8 +454,8 @@ footer {
 
   header nav ul {
     width: 100%;
-
-    flex-basis: content;
+    justify-content: space-between;
+    /* flex-basis: content; */
   }
 
   header nav ul li a {
@@ -470,16 +470,19 @@ footer {
     border-bottom: 2px solid;
     color: var(--main-color);
   }
+  /* faire disparaitre le bouton rechercher en mode phone */
   .desktop {
     display: none;
   }
+  /* et faire apparaitre la loupe */
   .phone {
     display: inline;
   }
+  /* couleur de la loupe */
   .fa-magnifying-glass {
     color: white;
   }
-
+  /* diminuer taille du texte pour gagner de la place */
   input[type="search"] {
     font-size: 14px;
   }
