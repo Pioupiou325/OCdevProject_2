@@ -119,7 +119,7 @@ input[type="search"] {
 
 /* div contenant le bouton et/ou la loupe */
 .research {
-  height: 51px;
+  height: 53px;
   border: 2px solid var(--main-color);
   border-radius: 0px 15px 15px 0px;
   background-color: var(--main-color);
@@ -129,6 +129,7 @@ input[type="search"] {
   font-family: Raleway;
   font-weight: 700;
   color: white;
+  margin-top: -2px;
 }
 
 /* masquer loupe en mode desktop */
@@ -568,9 +569,13 @@ footer {
   }
   .button-filter {
     width: 50%;
+    font-size: 14px;
   }
   .conclusion {
     margin-top: 30px;
+  }
+  .info-icone {
+    padding-left: 8px;
   }
   .hebergements-and-populaires {
     flex-direction: column-reverse;
