@@ -653,7 +653,7 @@ x */
     padding-bottom: 5px;
   }
   .activities-cards article.card {
-    padding: 5px;
+    padding-bottom: 5px;
     margin-bottom: 15px;
   }
   footer {
