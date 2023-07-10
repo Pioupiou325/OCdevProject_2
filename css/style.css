@@ -8,6 +8,9 @@
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
 }
+img {
+  object-fit: cover;
+}
 /* les titres */
 h1 {
   margin-bottom: 0px;
@@ -159,13 +162,13 @@ input[type="search"] {
   display: flex;
   flex-direction: row;
 
-  gap: 10px;
+  gap: 15px;
 }
 
 .first-group,
 .second-group {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 /* caractéristiques des boutons */
 .button-filter {
@@ -590,6 +593,7 @@ x */
   .second-group {
     width: 100%;
     margin-bottom: 10px;
+    gap: 10px;
   }
   .button-filter {
     width: 50%;
@@ -626,7 +630,7 @@ x */
   .hebergements-cards-rang-1 > a,
   .hebergements-cards-rang-2 > a {
     flex-direction: column;
-    margin-top: 33px;
+    margin-top: 15px;
     width: 100%;
   }
   /* réduire l' écart vertival entre rang 1 et rang 2 */
@@ -638,6 +642,7 @@ x */
   /* mettre activities en column */
   .activities-cards {
     flex-direction: column;
+    gap: 0px;
   }
   .activities-cards p {
     margin: 0;
