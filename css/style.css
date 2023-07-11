@@ -45,7 +45,7 @@ header {
 }
 /* barre de nav en liste  */
 .liens {
-  gap: 40px;
+  gap: 4.25rem;
 }
 header nav ul {
   display: flex;
