@@ -207,14 +207,15 @@ input[type="search"] {
 
 /* cercle entourant l icone info */
 .entourer-info {
-  display: block;
+  display: flex;
   width: 22px;
-  border: 2px solid var(--main-bg-color);
+  height: 22px;
+  border: 2px solid #d9d9d9;
   border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }
-.info-icone {
-  padding-left: 9px;
-}
+
 .conclusion p {
   margin: 0;
 }
@@ -604,9 +605,7 @@ x */
   .conclusion {
     margin-top: 30px;
   }
-  .info-icone {
-    padding-left: 6px;
-  }
+
   .hebergements-and-populaires {
     flex-direction: column-reverse;
   }
