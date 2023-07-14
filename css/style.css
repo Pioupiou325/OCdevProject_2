@@ -337,6 +337,9 @@ input[type="search"] {
 .populaires {
   width: 32%;
 }
+.populaires a {
+  text-decoration: none;
+}
 
 .populaires-title {
   display: flex;
